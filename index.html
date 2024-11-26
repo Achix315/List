@@ -1,202 +1,58 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste photo 2025</title>
-    <style>
-        /* styles intégrés dans le fichier HTML */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #2c2f36; /* Fond noir/gris foncé */
-            color: white; /* Texte en blanc pour contraster avec le fond foncé */
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color:#212121;; /* Fond blanc pour la zone principale */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center; /* Centre le titre */
-            color: #333;
-            font-size: 2em; /* Agrandit la taille du titre */
-            margin-bottom: 20px;
-        }
-
-        /* Titre et liste EMMA en rose */
-        .emma-list h2 {
-            color: #d16d8e; /* Couleur rose foncé pour EMMA */
-        }
-
-        .emma-list .list li {
-            color: #d16d8e; /* Couleur rose foncé pour les éléments de la liste d'EMMA */
-        }
-
-        /* Titre et liste VICTORIEN en bleu foncé */
-        .victorien-list h2 {
-            color:#0B79B0; /* Couleur bleu foncé pour VICTORIEN */
-        }
-
-        .victorien-list .list li {
-            color:#0B79B0; /* Couleur bleu foncé pour les éléments de la liste de VICTORIEN */
-        }
-
-        .list-container {
-            margin-bottom: 20px;
-        }
-
-        ul.list {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul.list li {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <!-- Titre centré -->
-        <h1>Liste photo 2025</h1>
-        
-        <div class="list-container emma-list">
-            <h2>Liste de Emma</h2>
-            <ul class="list">
-<li><span style="color: #ccffcc;"><input id="emma1" type="checkbox" /> Un panneau de signalisation rouill&eacute;</span></li>
-<li><span style="color: #ccffcc;"><input id="emma2" type="checkbox" /> Un oiseau en train de manger</span></li>
-<li><span style="color: #ccffcc;"><input id="emma3" type="checkbox" /> Une fontaine ou une cascade</span></li>
-<li><span style="color: #ccffcc;"> <input id="emma4" type="checkbox" /> Une voiture d&rsquo;une couleur vive ou rare (rose, vert fluo, etc.)</span></li>
-<li><span style="color: #ccffcc;"><input id="emma5" type="checkbox" /> Un insecte pos&eacute; sur une fleur</span></li>
-<li><span style="color: #ccffcc;"><input id="emma6" type="checkbox" /> Un arbre avec des chaussures accroch&eacute;es &agrave; ses branches</span></li>
-<li><span style="color: #ccffcc;"><input id="emma7" type="checkbox" /> Une personne pratiquant un art de rue</span></li>
-<li><span style="color: #ccffcc;"><input id="emma8" type="checkbox" /> Une plaque d'imatriculation avec un mot ou une s&eacute;quence drole (ex. : LOL, 1234)</span></li>
-<li><span style="color: #ffcc99;"><input id="emma9" type="checkbox" /> Un graffiti original ou dr&ocirc;le</span></li>
-<li><span style="color: #993366;"><input id="emma10" type="checkbox" /> <span style="color: #ffcc99;">Un pont illumin&eacute; la nuit</span></span></li>
-<li><span style="color: #993366;"><input id="emma11" type="checkbox" /> <span style="color: #ffcc99;">Un nuage en forme d&rsquo;animal</span></span></li>
-<li><span style="color: #993366;"><input id="emma12" type="checkbox" /><span style="color: #ffcc99;"> Un objet avec une forme de c&oelig;ur (naturelle ou artificielle)&nbsp;</span></span></li>
-<li><span style="color: #993366;"><input id="emma13" type="checkbox" /> <span style="color: #ffcc99;">Une sculpture ou une statue inhabituelle</span></span><span style="color: #993366;"><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma14" type="checkbox" /> Un arc-en-ciel</span></li>
-<li><span style="color: #ffcc99;"><input id="emma15" type="checkbox" /> une enseigne avec un nom rigolo</span></li>
-<li><span style="color: #993366;"><span style="color: #ffcc99;"><input id="emma16" type="checkbox" /> Une personne portant une tenue totalement d&eacute;pareill&eacute;e</span><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma17" type="checkbox" /> Une inscription &eacute;trange ou dr&ocirc;le sur un mur ou un panneau</span><span style="color: #993366;"><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma18" type="checkbox" /> Un ponton ou une jet&eacute;e en bois au bord de l'eau</span></li>
-<li><span style="color: #ffcc99;"><input id="emma19" type="checkbox" /> Une personne portant trois objets de couleur diff&eacute;rente de fa&ccedil;on visible</span><span style="color: #339966;"><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma20" type="checkbox" /> Un animal assis ou couch&eacute; dans un lieu inhabituel (ex. : un chat dans un pot de fleurs)<br /></span></li>
-<li><span style="color: #993366;"><input id="emma21" type="checkbox" /> <span style="color: #ffcc99;">Une paire de lunette tr&egrave;s flashy (orange fluo, vert etc)</span><br /></span></li>
-<li><span style="color: #993366;"><input id="emma22" type="checkbox" /> <span style="color: #ffcc99;">Un bebe avec des lunette de soleil</span></span></li>
-<li><span style="color:#CF5555;;"><input id="emma23" type="checkbox" /> Une horloge publique indiquant la mauvaise heure</span></li>
-<li><span style="color:#CF5555;;"><input id="emma24" type="checkbox" /> Une ruche</span></li>
-<li><span style="color:#CF5555;"><input id="emma25" type="checkbox" /> Une personne portant un chapeau tr&egrave;s original</span></li>
-<li><span style="color:#CF5555;"><input id="emma26" type="checkbox" /> Un animal domestique en situation comique</span></li>
-<li><span style="color:#CF5555;"><input id="emma27" type="checkbox" /> Une feuille d&rsquo;arbre avec une forme inhabituelle</span></li>
-<li><span style="color:#CF5555;"><input id="emma28" type="checkbox" /> Une cabane dans un arbre</span></li>
-<li><span style="color:#CF5555;;"><input id="emma29" type="checkbox" /> Une photo avec exactement 3 chats ensemble<br /></span></li>
-<li><span style="color:#CF5555;"><input id="emma30" type="checkbox" /> Un v&eacute;hicule recouvert de stickers ou d'objets d&eacute;coratifs &eacute;tranges</span></li>
-        </div>
-        <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;-----------------------------------------------------------------------------------------------------------------------------------------------------</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-        <div class="list-container victorien-list">
-            <h2>Liste de Victorien</h2>
-            <ul class="list">
-<li><span style="color: #ccffcc;"><input id="emma11333" type="checkbox" /> Un panneau de signalisation rouill&eacute;</span></li>
-<li><span style="color: #ccffcc;"><input id="emma32444" type="checkbox" /> Un oiseau en train de manger</span></li>
-<li><span style="color: #ccffcc;"><input id="emma23555" type="checkbox" /> Une fontaine ou une cascade</span></li>
-<li><span style="color: #ccffcc;"> <input id="emma24666" type="checkbox" /> Une voiture d&rsquo;une couleur vive ou rare (rose, vert fluo, etc.)</span></li>
-<li><span style="color: #ccffcc;"><input id="emma45" type="checkbox" /> Un insecte pos&eacute; sur une fleur</span></li>
-<li><span style="color: #ccffcc;"><input id="emma56" type="checkbox" /> Un arbre avec des chaussures accroch&eacute;es &agrave; ses branches</span></li>
-<li><span style="color: #ccffcc;"><input id="emma57" type="checkbox" /> Une personne pratiquant un art de rue</span></li>
-<li><span style="color: #ccffcc;"><input id="emma58" type="checkbox" /> Une plaque d'imatriculation avec un mot ou une s&eacute;quence drole (ex. : LOL, 1234)</span></li>
-<li><span style="color: #ffcc99;"><input id="emma29777" type="checkbox" /> Un graffiti original ou dr&ocirc;le</span></li>
-<li><span style="color: #993366;"><input id="emma410" type="checkbox" /> <span style="color: #ffcc99;">Un pont illumin&eacute; la nuit</span></span></li>
-<li><span style="color: #993366;"><input id="emma511" type="checkbox" /> <span style="color: #ffcc99;">Un nuage en forme d&rsquo;animal</span></span></li>
-<li><span style="color: #993366;"><input id="emma112" type="checkbox" /><span style="color: #ffcc99;"> Un objet avec une forme de c&oelig;ur (naturelle ou artificielle)&nbsp;</span></span></li>
-<li><span style="color: #993366;"><input id="emma313" type="checkbox" /> <span style="color: #ffcc99;">Une sculpture ou une statue inhabituelle</span></span><span style="color: #993366;"><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma514" type="checkbox" /> Un arc-en-ciel</span></li>
-<li><span style="color: #ffcc99;"><input id="emma415" type="checkbox" /> une enseigne avec un nom rigolo</span></li>
-<li><span style="color: #993366;"><span style="color: #ffcc99;"><input id="emma516" type="checkbox" /> Une personne portant une tenue totalement d&eacute;pareill&eacute;e</span><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma517" type="checkbox" /> Une inscription &eacute;trange ou dr&ocirc;le sur un mur ou un panneau</span><span style="color: #993366;"><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma518" type="checkbox" /> Un ponton ou une jet&eacute;e en bois au bord de l'eau</span></li>
-<li><span style="color: #ffcc99;"><input id="emma519" type="checkbox" /> Une personne portant trois objets de couleur diff&eacute;rente de fa&ccedil;on visible</span><span style="color: #339966;"><br /></span></li>
-<li><span style="color: #ffcc99;"><input id="emma520" type="checkbox" /> Un animal assis ou couch&eacute; dans un lieu inhabituel (ex. : un chat dans un pot de fleurs)<br /></span></li>
-<li><span style="color: #993366;"><input id="emma521" type="checkbox" /> <span style="color: #ffcc99;">Une paire de lunette tr&egrave;s flashy (orange fluo, vert etc)</span><br /></span></li>
-<li><span style="color: #993366;"><input id="emma522" type="checkbox" /> <span style="color: #ffcc99;">Un bebe avec des lunette de soleil</span></span></li>
-<li><span style="color:#CF5555;;"><input id="emma223" type="checkbox" /> Une horloge publique indiquant la mauvaise heure</span></li>
-<li><span style="color:#CF5555;;"><input id="emma424" type="checkbox" /> Une ruche</span></li>
-<li><span style="color:#CF5555;"><input id="emma325" type="checkbox" /> Une personne portant un chapeau tr&egrave;s original</span></li>
-<li><span style="color:#CF5555;"><input id="emma226" type="checkbox" /> Un animal domestique en situation comique</span></li>
-<li><span style="color:#CF5555;"><input id="emma327" type="checkbox" /> Une feuille d&rsquo;arbre avec une forme inhabituelle</span></li>
-<li><span style="color:#CF5555;"><input id="emma528" type="checkbox" /> Une cabane dans un arbre</span></li>
-<li><span style="color:#CF5555;;"><input id="emma529" type="checkbox" /> Une photo avec exactement 3 chats ensemble<br /></span></li>
-<li><span style="color:#CF5555;"><input id="emma530" type="checkbox" /> Un v&eacute;hicule recouvert de stickers ou d'objets d&eacute;coratifs &eacute;tranges</span></li>
-        </div>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Inclusion du fichier JavaScript (facultatif pour des fonctionnalités supplémentaires) -->
-    <script src="script.js"></script>
 <script>
-// Fonction pour sauvegarder l'état des cases à cocher (si nécessaire)
+// Fonction pour sauvegarder l'état des cases cochées dans localStorage
+function saveCheckboxState() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        localStorage.setItem(checkbox.id, checkbox.checked);
+    });
+}
+
+// Fonction pour restaurer l'état des cases cochées depuis localStorage
+function restoreCheckboxState() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        const savedState = localStorage.getItem(checkbox.id);
+        checkbox.checked = savedState === 'true'; // Rétablit l'état si sauvegardé
+    });
+}
+
+// Restaurer l'état des cases cochées au chargement de la page
+document.addEventListener('DOMContentLoaded', restoreCheckboxState);
+
+// Ajouter un écouteur d'événement pour sauvegarder l'état à chaque changement
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', saveCheckboxState);
+});
+
+// Ajouter un écouteur d'événement pour envoyer un message lorsque la case est cochée
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', () => {
-        // Sauvegarder l'état des cases si nécessaire
-        // Vous pouvez utiliser localStorage ou d'autres moyens pour cela
+        if (checkbox.checked) {
+            let listName = ""; // Variable pour le nom de la liste
+            let itemText = checkbox.parentElement.textContent.trim(); // Texte de l'élément de la liste
 
-        // Code pour l'envoi au webhook
-        let listName = ""; // Déclare une variable pour le nom de la liste
-        let itemText = checkbox.parentElement.textContent.trim(); // Texte de l'élément de la liste
+            // Vérifie à quelle liste appartient la case cochée
+            if (checkbox.closest('.emma-list')) {
+                listName = "Emma"; // Liste Emma
+            } else if (checkbox.closest('.victorien-list')) {
+                listName = "Victorien"; // Liste Victorien
+            }
 
-        // Vérifie à quelle liste appartient la case cochée
-        if (checkbox.closest('.emma-list')) {
-            listName = "Emma"; // Liste Emma
-        } else if (checkbox.closest('.victorien-list')) {
-            listName = "Victorien"; // Liste Victorien
+            // Crée le message à envoyer sur Discord
+            const data = {
+                content: `La case de "${itemText}" dans la liste de ${listName} a été cochée !`
+            };
+
+            // Remplacez par l'URL de votre webhook
+            const webhookUrl = "https://discord.com/api/webhooks/1310789633021313024/q-ZBPojw4DCqyFjf_gsbUG0UjUuz0swkYpHG7on1kW5Zg5p3HBpwbYXaXEBmVJWVO8va";
+
+            // Envoi de la requête au webhook avec le message approprié
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            }).catch(error => console.error('Erreur : ', error));
         }
-
-        // Crée un message personnalisé selon la liste
-        const data = {
-            content: `La case de "${itemText}" dans la liste de ${listName} a été cochée !`
-        };
-
-        // URL de votre webhook
-        const webhookUrl = "https://discord.com/api/webhooks/1310789633021313024/q-ZBPojw4DCqyFjf_gsbUG0UjUuz0swkYpHG7on1kW5Zg5p3HBpwbYXaXEBmVJWVO8va";
-
-        // Envoi de la requête au webhook avec le message approprié
-        fetch(webhookUrl, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        }).catch(error => console.error('Erreur : ', error));
     });
 });
 </script>
-</script>
-</body>
-</html>
