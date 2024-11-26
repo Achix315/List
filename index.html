@@ -162,5 +162,32 @@
 
     <!-- Inclusion du fichier JavaScript (facultatif pour des fonctionnalités supplémentaires) -->
     <script src="script.js"></script>
+    <script>
+    // Fonction pour sauvegarder l'état des cases cochées dans localStorage
+    function saveCheckboxState() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        });
+    }
+
+    // Fonction pour restaurer l'état des cases cochées depuis localStorage
+    function restoreCheckboxState() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            const savedState = localStorage.getItem(checkbox.id);
+            checkbox.checked = savedState === 'true'; // Rétablit l'état si sauvegardé
+        });
+    }
+
+    // Restaurer l'état des cases cochées au chargement de la page
+    document.addEventListener('DOMContentLoaded', restoreCheckboxState);
+
+    // Ajouter un écouteur d'événement pour sauvegarder l'état à chaque changement
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', saveCheckboxState);
+    });
+</script>
 </body>
 </html>
