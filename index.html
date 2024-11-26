@@ -162,50 +162,41 @@
 
     <!-- Inclusion du fichier JavaScript (facultatif pour des fonctionnalités supplémentaires) -->
     <script src="script.js"></script>
-    <script>
-    // Fonction pour sauvegarder l'état des cases cochées dans localStorage
-    function saveCheckboxState() {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            localStorage.setItem(checkbox.id, checkbox.checked);
-        });
-    }
-
-    // Fonction pour restaurer l'état des cases cochées depuis localStorage
-    function restoreCheckboxState() {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            const savedState = localStorage.getItem(checkbox.id);
-            checkbox.checked = savedState === 'true'; // Rétablit l'état si sauvegardé
-        });
-    }
-
-    // Restaurer l'état des cases cochées au chargement de la page
-    document.addEventListener('DOMContentLoaded', restoreCheckboxState);
-
-    // Ajouter un écouteur d'événement pour sauvegarder l'état à chaque changement
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', saveCheckboxState);
-    });
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+<script>
+// Fonction pour sauvegarder l'état des cases à cocher (si nécessaire)
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-            const data = {
-                content: `La case "${checkbox.parentElement.textContent.trim()}" a été cochée !`
-            };
+        // Sauvegarder l'état des cases si nécessaire
+        // Vous pouvez utiliser localStorage ou d'autres moyens pour cela
 
-            // Remplacez par l'URL de votre webhook
-            const webhookUrl = "https://discord.com/api/webhooks/1310789633021313024/q-ZBPojw4DCqyFjf_gsbUG0UjUuz0swkYpHG7on1kW5Zg5p3HBpwbYXaXEBmVJWVO8va";
+        // Code pour l'envoi au webhook
+        let listName = ""; // Déclare une variable pour le nom de la liste
+        let itemText = checkbox.parentElement.textContent.trim(); // Texte de l'élément de la liste
 
-            fetch(webhookUrl, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            }).catch(error => console.error('Erreur : ', error));
+        // Vérifie à quelle liste appartient la case cochée
+        if (checkbox.closest('.emma-list')) {
+            listName = "Emma"; // Liste Emma
+        } else if (checkbox.closest('.victorien-list')) {
+            listName = "Victorien"; // Liste Victorien
         }
+
+        // Crée un message personnalisé selon la liste
+        const data = {
+            content: `La case de "${itemText}" dans la liste de ${listName} a été cochée !`
+        };
+
+        // URL de votre webhook
+        const webhookUrl = "https://discord.com/api/webhooks/1310789633021313024/q-ZBPojw4DCqyFjf_gsbUG0UjUuz0swkYpHG7on1kW5Zg5p3HBpwbYXaXEBmVJWVO8va";
+
+        // Envoi de la requête au webhook avec le message approprié
+        fetch(webhookUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        }).catch(error => console.error('Erreur : ', error));
     });
 });
+</script>
 </script>
 </body>
 </html>
