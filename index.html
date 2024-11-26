@@ -188,6 +188,24 @@
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', saveCheckboxState);
     });
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            const data = {
+                content: `La case "${checkbox.parentElement.textContent.trim()}" a été cochée !`
+            };
+
+            // Remplacez par l'URL de votre webhook
+            const webhookUrl = "https://discord.com/api/webhooks/1310771628610687056/L22CnrcA6EpLMyO8lX_H7JSkVNmfenjweUDr-seOQheLbgx4dndGNNyzdCveuIxYaePJ";
+
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            }).catch(error => console.error('Erreur : ', error));
+        }
+    });
+});
 </script>
 </body>
 </html>
