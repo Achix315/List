@@ -197,14 +197,14 @@ document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
 
             // Vérifie à quelle liste appartient la case cochée
             if (checkbox.closest('.emma-list')) {
-                listName = "<@1279527430452805664>"; // Liste Emma
+                listName = "<@283605589966323712>"; // Liste Emma<@283605589966323712
             } else if (checkbox.closest('.victorien-list')) {
-                listName = "<@283605589966323712>"; // Liste Victorien
+                listName = "<@1279527430452805664>"; // Liste Victorien
             }
 
             // Crée le message à envoyer sur Discord
             const data = {
-                content: `@everyone La case de "${itemText}" dans la liste de ${listName} a été cochée !`
+                content: `${listName} La case "${itemText}" a été cochée !`
             };
 
             // Remplacez par l'URL de votre webhook
